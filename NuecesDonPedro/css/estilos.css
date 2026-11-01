@@ -1,0 +1,213 @@
+/* ===== Base ===== */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #f6f0e6;
+    color: #3b2a1a;
+    line-height: 1.5;
+}
+
+a { color: #6f4e37; }
+img { max-width: 100%; height: auto; }
+
+/* ===== Encabezado y menú ===== */
+.encabezado {
+    background: #6f4e37;
+    color: #ffffff;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+.encabezado h1 { margin: 0; font-size: 2rem; }
+.encabezado p { margin: 6px 0 0; font-style: italic; }
+
+.menu { background: #4e3524; }
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu a {
+    display: block;
+    padding: 14px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu a:hover { background: #8a6a4f; }
+
+/* ===== Contenido ===== */
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 18px;
+}
+
+.contenedor h2 { color: #6f4e37; }
+
+.portada {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 35px 25px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.tarjeta {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #eadfce;
+}
+
+.tarjeta h3 { margin: 12px 0 6px; color: #6f4e37; }
+.tarjeta p { margin: 4px 0; }
+.tarjeta .boton { margin-top: auto; text-align: center; }
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 12px;
+    background: #6f4e37;
+    color: #ffffff;
+    text-decoration: none;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.boton:hover { background: #4e3524; }
+.boton-secundario { background: #8a6a4f; }
+.boton-mini { padding: 6px 12px; margin-top: 0; font-size: 0.9rem; }
+
+.aviso {
+    padding: 16px;
+    background: #fff4d6;
+    color: #6b4e00;
+    border-left: 5px solid #e0a800;
+    border-radius: 4px;
+}
+
+/* ===== Pie ===== */
+.pie-pagina {
+    background: #4e3524;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 10px;
+    margin-top: 30px;
+}
+
+.pie-pagina p { margin: 4px 0; }
+
+/* ===== Formularios, mensajes y tablas ===== */
+.formulario {
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.formulario textarea { min-height: 110px; resize: vertical; }
+
+.formulario .casilla {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+.formulario .casilla input { width: auto; margin: 0; }
+
+.error {
+    padding: 12px;
+    background: #ffe1e1;
+    color: #7a1111;
+    border-radius: 4px;
+}
+
+.mensaje-exito {
+    padding: 35px;
+    text-align: center;
+    background: #eef5e8;
+    border-radius: 8px;
+}
+
+.tabla-responsive { overflow-x: auto; }
+
+.tabla-admin {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.tabla-admin th,
+.tabla-admin td {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    text-align: left;
+}
+
+.tabla-admin th { background: #6f4e37; color: #ffffff; }
+
+.form-inline { display: inline; margin-left: 8px; }
+.form-inline button {
+    border: 0;
+    background: none;
+    color: #8a1f1f;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.form-estado { display: flex; gap: 6px; align-items: center; }
+.form-estado select { padding: 6px; }
+
+/* ===== Responsivo ===== */
+@media (max-width: 600px) {
+    .encabezado h1 { font-size: 1.5rem; }
+    .menu ul { flex-direction: column; }
+    .menu a { text-align: center; }
+    .formulario { padding: 18px; }
+}
